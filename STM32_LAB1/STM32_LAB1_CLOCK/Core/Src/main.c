@@ -19,7 +19,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "ex7.h"
 #include "ex9.h"
+#include "ex8.h"
+#include "ex10.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -92,9 +95,16 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-	  clearNumberOnClock(0);
+  	int hour = 0;
+    int minute = 5;
+    int second = 0;
+
+    while (1)
+    {
+  	  ex10_run(&hour, &minute, &second);
+  	  HAL_Delay(500);
+  	  clearAllClock();
+  	  HAL_Delay(500);
 
     /* USER CODE END WHILE */
 
